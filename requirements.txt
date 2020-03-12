@@ -1,0 +1,24 @@
+delorean==1.0.0
+requests==2.18.3
+parse==1.8.2
+beautifulsoup4==4.6.0
+feedparser==5.2.1
+Pillow==5.1.0
+xmltodict==0.11.0
+PyPDF2==1.26.0
+python-docx==0.8.6
+jinja2==2.10
+mistune==0.8.3
+fpdf==1.7.2
+pdf2image==0.1.14
+openpyxl==2.5.4
+matplotlib==2.2.2
+Fiona==1.7.13
+Shapely==1.6.4.post2
+twilio==6.16.3
+telepot==12.7
+
+
+
+Certain files will be created only after the steps are followed from the recipes.
+These files are not added in the repository.
