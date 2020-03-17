@@ -7,10 +7,10 @@ data = [
 ]
 
 # Print the header for reference
-print('REVENUE |  PROFIT | PERCENT')
+print('REVENUE | PROFIT | PERCENT')
 
 # This template aligns and displays the data in the proper format
-TEMPLATE = '{revenue:>7,} | {profit:>+7} | {percent:>7.2%}'
+TEMPLATE = '{revenue:>7,} | {profit:>+6} | {percent:>7.2%}'
 
 # Print the data rows
 for revenue, profit in data:
