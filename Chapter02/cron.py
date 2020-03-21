@@ -24,7 +24,7 @@ if __name__ == '__main__':
         config = configparser.ConfigParser()
         config.read_file(args.config)
         # Transforming values into integers
-        args.n1 = int(config['DEFAULT']['n1'])
-        args.n2 = int(config['DEFAULT']['n2'])
+        args.n1 = int(config['ARGUMENTS']['n1'])
+        args.n2 = int(config['ARGUMENTS']['n2'])
 
     main(args.n1, args.n2, args.output)
