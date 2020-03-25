@@ -42,6 +42,11 @@ def get_links(parsed_source, page):
         if link.startswith('#'):
             continue
 
+        if link.startswith('mailto:'):
+            # Ignore other links like mailto
+            # More cases like ftp or similar may be included here
+            continue
+
         # Always accept local links
         if not link.startswith('http'):
             netloc = parsed_source.netloc
