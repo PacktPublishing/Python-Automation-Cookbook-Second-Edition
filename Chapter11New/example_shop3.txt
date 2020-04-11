@@ -1,0 +1,6 @@
+Hello:
+
+  I need your full details including your address and phone for an invoice. Can you please send them to me?
+
+  Thanks a lot,
+    Carrie
