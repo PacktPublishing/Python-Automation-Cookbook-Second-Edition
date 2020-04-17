@@ -14,9 +14,9 @@ def parse_iso(timestamp):
     return total.date
 
 
-def line(timestamp, total_usd, number):
+def line(date, total_usd, number):
     data = {
-        'DATE': timestamp,
+        'DATE': date,
         'TOTAL USD': total_usd,
         'NUMBER': number,
         # Round to two decimal places
@@ -32,22 +32,22 @@ def calculate_results(reader):
     number = 0
 
     for row in reader:
-        timestamp = parse_iso(row['STD_TIMESTAMP'])
+        date = parse_iso(row['STD_TIMESTAMP'])
         if not last_date:
-            last_date = timestamp
+            last_date = date
 
-        if last_date < timestamp:
+        if last_date < date:
             # New day!
             result.append(line(last_date, total_usd, number))
             total_usd = 0
             number = 0
-            last_date = timestamp
+            last_date = date
 
         number += 1
         total_usd += Decimal(row['USD'])
 
     # Final results
-    result.append(line(timestamp, total_usd, number))
+    result.append(line(date, total_usd, number))
     return result
 
 
