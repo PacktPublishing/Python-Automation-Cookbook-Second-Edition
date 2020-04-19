@@ -7,7 +7,7 @@ from code.code_fixtures import write_zipfile, read_zipfile
 
 
 @fixture
-def zipfile():
+def fzipfile():
     content_length = 50
     content = ''.join(random.choices(string.ascii_lowercase, k=content_length))
     fnumber = ''.join(random.choices(string.digits, k=3))
@@ -29,15 +29,15 @@ def test_writeread_zipfile():
     assert TESTCONTENT == content
 
 
-def test_readwrite_zipfile(zipfile):
-    filename, expected_content = zipfile
+def test_readwrite_zipfile(fzipfile):
+    filename, expected_content = fzipfile
     content = read_zipfile(filename)
 
     assert content == expected_content
 
 
-def test_internal_zipfile(zipfile):
-    filename, expected_content = zipfile
+def test_internal_zipfile(fzipfile):
+    filename, expected_content = fzipfile
     EXPECTED_LIST = ['internal.txt']
 
     # Verify only a single file exist in the zipfile
