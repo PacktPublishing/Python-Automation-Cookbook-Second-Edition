@@ -1,14 +1,13 @@
-Hi!
+Hi {name}:
 
-  This is an automated email checking articles published last week containing the *keywords*: {keywords}
-  in the following feeds:
-{feed_list}
+This is an email talking about **things**
 
+### Very important info
 
-List of articles:
-=====
-{article_list}
+1. One thing
+2. Other thing
+3. Some extra detail
 
+Best regards,
 
-
-Enjoy the read!
+  *The email team*
