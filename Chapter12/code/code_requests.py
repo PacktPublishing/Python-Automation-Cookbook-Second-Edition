@@ -30,5 +30,5 @@ def order_pizza(recipe='DEFAULT'):
 
     extra_info = RECIPES[recipe]
     data.update(extra_info)
-    response = requests.post('https://httpbin.org/post', data)
-    return response.json()['form']
+    resp = requests.post('https://httpbin.org/post', data)
+    return resp.json()['form']

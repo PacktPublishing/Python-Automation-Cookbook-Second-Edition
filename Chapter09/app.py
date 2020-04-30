@@ -4,7 +4,7 @@ https://github.com/datademofun/heroku-basic-flask
 
 Add twilio on requirements.txt and replace app.py with this file
 
-See chapter 8 for further detail
+See chapter 9 for further detail
 '''
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse

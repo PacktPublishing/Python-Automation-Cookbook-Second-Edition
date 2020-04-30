@@ -1,3 +1,4 @@
+# IMPORTS #
 import argparse
 import sys
 import configparser
@@ -14,6 +15,8 @@ from collections import namedtuple
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
+# READ TEMPLATES #
 
 # Group the email configuration parameters
 # Note the 'from_' to avoid using a reserved Python keyword (from)

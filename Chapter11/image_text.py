@@ -18,7 +18,7 @@ def main(image_file, verbose):
 
             if block.confidence < 0.5:
                 if verbose:
-                    print('Skipping block for low confidence')
+                    print('Skipping block due to low confidence')
                 continue
 
             for paragraph in block.paragraphs:
@@ -29,11 +29,11 @@ def main(image_file, verbose):
                     ])
                     paragraph_text.append(word_text)
                     if verbose:
-                        print('Word text: {} (confidence: {})'.format(
-                            word_text, word.confidence))
+                        print(f'Word text: {word_text} '
+                              f'(confidence: {word.confidence})')
                         for symbol in word.symbols:
-                            print('\tSymbol: {} (confidence: {})'.format(
-                                symbol.text, symbol.confidence))
+                            print(f'\tSymbol: {symbol.text} '
+                                  f'(confidence: {symbol.confidence})')
 
                 print(' '.join(paragraph_text))
 
