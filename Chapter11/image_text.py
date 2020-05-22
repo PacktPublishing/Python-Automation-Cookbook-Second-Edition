@@ -16,7 +16,7 @@ def main(image_file, verbose):
             if verbose:
                 print('\nBlock confidence: {}\n'.format(block.confidence))
 
-            if block.confidence < 0.5:
+            if block.confidence < 0.8:
                 if verbose:
                     print('Skipping block due to low confidence')
                 continue
